@@ -11,7 +11,7 @@
     QString static firstPlugin_filePath = "E:/lwks/build-ctk-plugin-first-Desktop_Qt_5_12_3_MinGW_64_bit-Debug/debug/ctk-plugin-first.dll";
 #else
     // 使用msvc编译器时的定义
-    QString static firstPlugin_filePath = "/home/jackey/Documents/build-testPlugin-Desktop-Debug/libtestPlugin.so";
+    QString static firstPlugin_filePath = "/home/jackey/Documents/github.com/build-CTK-Desktop-Debug/08.01plugin/testPlugin/libtestPlugin.so";
 #endif
 
 int main(int argc, char *argv[])
