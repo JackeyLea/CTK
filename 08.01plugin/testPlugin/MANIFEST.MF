@@ -1,0 +1,2 @@
+Plugin-SymbolicName:testPlugin
+Plugin-Version:1.0.0
