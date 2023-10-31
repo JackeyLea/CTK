@@ -13,3 +13,9 @@ WidgetA::~WidgetA()
     delete ui;
 }
 
+
+void WidgetA::on_btnClear_clicked()
+{
+    ui->text->clear();
+}
+

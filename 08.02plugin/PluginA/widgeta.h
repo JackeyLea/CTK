@@ -16,6 +16,9 @@ public:
     WidgetA(QWidget *parent = nullptr);
     ~WidgetA();
 
+private slots:
+    void on_btnClear_clicked();
+
 private:
     Ui::WidgetA *ui;
 };
