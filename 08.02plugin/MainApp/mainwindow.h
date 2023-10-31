@@ -7,6 +7,8 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
+class ctkPluginContext;
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -16,6 +18,11 @@ public:
     ~MainWindow();
 
 private:
+    void loadPlugin();
+
+private:
     Ui::MainWindow *ui;
+
+    ctkPluginContext *context;
 };
 #endif // MAINWINDOW_H
