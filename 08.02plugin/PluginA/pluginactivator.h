@@ -14,8 +14,8 @@ class PluginActivator : public QObject, public ctkPluginActivator
     Q_PLUGIN_METADATA(IID "PluginA_CTK")
 
 public:
-    void start(ctkPluginActivator* context);
-    void stop(ctkPluginActivator* context);
+    void start(ctkPluginContext* context);
+    void stop(ctkPluginContext* context);
 
 private:
     QScopedPointer<PluginService> ps;

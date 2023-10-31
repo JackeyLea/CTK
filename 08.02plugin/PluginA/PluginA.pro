@@ -1,9 +1,14 @@
-QT       += core widgets
-QT       -= gui
+QT         += core widgets
+QT         -= gui
 
-TARGET    = PluginA
-TEMPLATE  = lib
-CONFIG   += c++11
+TARGET      = PluginA
+TEMPLATE    = lib
+CONFIG     += c++11
+DESTDIR     = ../../bin/plugins
+MOC_DIR     = moc
+RCC_DIR     = rcc
+UI_DIR      = ui
+OBJECTS_DIR = obj
 
 include(/home/jackey/Documents/github.com/CTK/CTK.pri)
 
@@ -12,10 +17,12 @@ include(/home/jackey/Documents/github.com/CTK/CTK.pri)
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    mypluginservice.cpp \
     pluginactivator.cpp \
     widgeta.cpp
 
 HEADERS += \
+    mypluginservice.h \
     pluginactivator.h \
     widgeta.h
 
@@ -26,3 +33,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    resource.qrc

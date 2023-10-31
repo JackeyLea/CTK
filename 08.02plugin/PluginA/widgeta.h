@@ -7,6 +7,7 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class WidgetA; }
 QT_END_NAMESPACE
 
+class ctkPluginContext;
 class WidgetA : public QWidget
 {
     Q_OBJECT
