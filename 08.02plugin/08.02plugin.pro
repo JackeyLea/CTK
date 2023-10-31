@@ -2,4 +2,5 @@ TEMPLATE = subdirs
 
 SUBDIRS += \
           MainApp \
-          PluginA
+          PluginA \
+          PluginB
