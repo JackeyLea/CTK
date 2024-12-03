@@ -10,7 +10,7 @@ RCC_DIR     = rcc
 UI_DIR      = ui
 OBJECTS_DIR = obj
 
-include(/home/jackey/Documents/github.com/CTK/CTK.pri)
+include($$PWD/../../CTK.pri)
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
