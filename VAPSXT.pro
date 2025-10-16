@@ -12,4 +12,5 @@ CONFIG += ordered
 
 SUBDIRS += \
     launcher \
+    log \
     testPlugin
