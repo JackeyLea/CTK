@@ -6,10 +6,16 @@
 #include <QtDebug>
 #include <QUrl>
 
+#include "../log/Log.h"
+
 QString static firstPlugin_filePath = "testPlugin.dll";
 
 int main(int argc, char *argv[])
 {
+    Log::GetInstance().Initialize("./logs", "myapp_cpp", LogLevel::DEBUG);
+    Log::GetInstance().Info("C++接口日志记录");
+    Log::GetInstance().Debug("格式化消息: %s %f", "测试", 3.14);
+
     QCoreApplication a(argc, argv);
 
     ctkPluginFrameworkFactory frameworkFactory;

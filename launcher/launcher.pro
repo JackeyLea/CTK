@@ -23,7 +23,8 @@ CONFIG(debug,debug|release){
         LIBS+= -L$$PWD/../3rd_party/debug/lib/ \
         -lCTKCore \
         -lCTKPluginFramework \
-        -lqtadvanceddockingd
+        -lqtadvanceddockingd \
+        -L$$PWD/../build/debug -llogd
 
         # 编译后执行复制命令
         QMAKE_POST_LINK += xcopy /D /F /E /Y \"$${PWD}\\..\\3rd_party\\debug\\bin\" \"..\\..\\debug\"
