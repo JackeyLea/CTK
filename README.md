@@ -8,7 +8,7 @@
 - Visual Studio 2022
 - spdlog 1.15.3
 - qtads 4.4.1 
-- openssl
+- openssl 3.5.4
 - vcpkg 
 - qt 5.15.2
 
