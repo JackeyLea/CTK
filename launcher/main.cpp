@@ -6,7 +6,7 @@
 #include <QtDebug>
 #include <QUrl>
 
-QString static firstPlugin_filePath = "libtestPlugin.so";
+QString static firstPlugin_filePath = "testPlugin.dll";
 
 int main(int argc, char *argv[])
 {
@@ -26,19 +26,19 @@ int main(int argc, char *argv[])
         return -1;
     }
 
-    // 获取插件服务的contex
-    // ctkPluginContext* pluginContext = framework->getPluginContext();
-    // try {
-    //     // 安装插件
-    //     QSharedPointer<ctkPlugin> plugin = pluginContext->installPlugin(QUrl::fromLocalFile(firstPlugin_filePath));
-    //     qDebug() << QString("Plugin[%1_%2] installed...").arg(plugin->getSymbolicName()).arg(plugin->getVersion().toString());
-    //     // 启动插件
-    //     plugin->start(ctkPlugin::START_TRANSIENT);
-    //     qDebug() << "Plugin start...";
-    // } catch (const ctkPluginException &e) {
-    //     qDebug() << QString("Failed install or run plugin: ") << e.what();
-    //     return -2;
-    // }
+    //  获取插件服务的contex
+    ctkPluginContext* pluginContext = framework->getPluginContext();
+    try {
+        // 安装插件
+        QSharedPointer<ctkPlugin> plugin = pluginContext->installPlugin(QUrl::fromLocalFile(firstPlugin_filePath));
+        qDebug() << QString("Plugin[%1_%2] installed...").arg(plugin->getSymbolicName()).arg(plugin->getVersion().toString());
+        // 启动插件
+        plugin->start(ctkPlugin::START_TRANSIENT);
+        qDebug() << "Plugin start...";
+    } catch (const ctkPluginException &e) {
+        qDebug() << QString("Failed install or run plugin: ") << e.what();
+        return -2;
+    }
 
     return a.exec();
 }
